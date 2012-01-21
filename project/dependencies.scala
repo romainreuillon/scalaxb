@@ -6,6 +6,9 @@ object Dependencies {
   val log4j = "log4j" % "log4j" % "1.2.17"
   val dispatch = "net.databinder.dispatch" %% "dispatch-core" % "0.10.1"
   val launcherInterface = "org.scala-sbt" % "launcher-interface" % "0.12.0"
+  
+  val treehuggerVersion = "0.0.1-SNAPSHOT"
+  val treehugger = "com.eed3si9n" %% "treehugger" % treehuggerVersion
 
   def scalaCompiler(sv: String) = "org.scala-lang" % "scala-compiler" % sv
 
@@ -18,6 +21,7 @@ object Dependencies {
   val appDependencies = Seq(
     launcherInterface % "provided",
     scopt,
+    treehugger,
     log4j
   )
   def integrationDependencies(sv: String) = Seq(
