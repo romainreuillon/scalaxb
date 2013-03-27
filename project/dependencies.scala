@@ -7,7 +7,7 @@ object Dependencies {
   val dispatch = "net.databinder.dispatch" %% "dispatch-core" % "0.10.1"
   val launcherInterface = "org.scala-sbt" % "launcher-interface" % "0.12.0"
   
-  val treehuggerVersion = "0.2.0"
+  val treehuggerVersion = "0.2.3"
   val treehugger = "com.eed3si9n" %% "treehugger" % treehuggerVersion
 
   def scalaCompiler(sv: String) = "org.scala-lang" % "scala-compiler" % sv
