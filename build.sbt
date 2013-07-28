@@ -18,7 +18,7 @@ val app = Project("app", file("cli")).
   settings(codegenSettings: _*).
   settings(
     name := "scalaxb",
-    libraryDependencies ++= appDependencies
+    libraryDependencies ++= appDependencies(scalaVersion.value)
   )
 
 val integration = Project("integration", file("integration")).

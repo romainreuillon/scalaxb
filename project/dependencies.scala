@@ -18,10 +18,11 @@ object Dependencies {
     case _ => "org.specs2" %% "specs2" % specs2Version
   }
 
-  val appDependencies = Seq(
+  def appDependencies(sv: String) = Seq(
     launcherInterface % "provided",
     scopt,
     treehugger,
+    specs2(sv) % "test",
     log4j
   )
   def integrationDependencies(sv: String) = Seq(
